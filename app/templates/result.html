@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+	<link rel="stylesheet" href="../static/stylesheets/result.css" />
+</head>
+<body>
+<div class=page>
+  <h1>Here are your recommendations....</h1>
+  {% for image in images %}
+    <a href='/moviepage/{{titles[loop.index0]}}'><img src="{{image}}" width=250px height=400px/></a>
+  {% endfor %}
+</div>
+</body>
+</html>

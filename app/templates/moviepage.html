@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{details[0]}}</title>
+	<link rel="stylesheet" href="../static/stylesheets/moviepage.css" />
+</head>
+<body>
+    <h1>Here are your selected movie details....</h1>
+    <div class="container">
+        <div class="left-column">
+        <img src="{{details[21]}}" alt="{{details[0]}}" width=300px height=500px />
+        </div>
+        <div class="right-column">
+            <div class="movie-description">
+                <span>{{details[19]}}</span>
+                <h2>{{details[0]}}</h2>
+                <p>{{details[18]}}</p>
+            </div>
+            <div class="movie-details">
+                <span><p1>Genre:</p1> {{details[1]}}</span><br>
+                <span><p1>Available Languages:</p1> {{details[3]}}</span><br>
+                <span><p1>Available in Countries:</p1> {{details[4]}}</span><br>
+                <span><p1>IMDb Score:</p1> {{details[10]}}</span><br>
+                <span><p1>Viewers Rating:</p1> {{details[9]}}</span><br>
+            </div>
+            <div class="movie-details">
+                <span><p1>Director(s):</p1> {{details[6]}}</span><br><br>
+                <span><p1>Writer(s):</p1> {{details[7]}}</span><br>
+                <span><p1>Acting Cast:</p1> {{details[8]}}</span><br>
+                <span><p1>Production House(s):</p1> {{details[16]}}</span><br>
+                <span><p1>Boxoffice Collection:</p1> {{details[13]}}</span><br>
+                <span><p1>Nominated for Awards:</p1> {{details[12]}}</span><br>
+                <span><p1>Awards Won:</p1> {{details[11]}}</span><br>
+            </div>
+            <div>
+                <a href="{{details[17]}}">Netflix Link</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

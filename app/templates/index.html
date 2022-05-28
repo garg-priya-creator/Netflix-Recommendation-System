@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Netflix Recommendation System</title>
+	<link rel="stylesheet" href="../static/stylesheets/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="../static/js/multiselect.min.js"></script>
+	<link rel="stylesheet" href="../static/stylesheets/multiselect.css"> 
+</head>
+<body>
+	<img src="../static/stylesheets/logo.svg" />
+	<div class="content">
+	<h1>Netflix Recommendation System</h1>	
+		<form name="passdata" action="/about" method="post">
+			<p1>Select atleast 4 TV Show/Movie Names that you like: </p1>
+			<select name="titles" multiple id="titles">
+				{% for title in titles %}
+				<option value= "{{title}}">{{title}}</option>"
+				{% endfor %}
+			</select>
+			<br>
+			<p1>Select Languages that you prefer: </p1>
+			<select name="languages" multiple id="languages">
+				{% for language in languages %}
+					<option value= "{{language}}">{{language}}</option>"
+				{% endfor %}
+			</select>
+			<br>
+			<input type="submit" value="Get Started">
+		</form>
+	</div>
+	<script>
+		$('#titles').multiselect({
+			columns: 1,
+			placeholder: 'Select Titles',
+			search: true,
+			selectAll: true
+		});
+		$('#languages').multiselect({
+			columns: 1,
+			placeholder: 'Select Languages',
+			search: true,
+			selectAll: true
+		});
+	</script>
+</body>
+</html>
