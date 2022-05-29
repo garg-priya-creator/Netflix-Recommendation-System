@@ -70,11 +70,9 @@ p1{
     /* overflow-wrap: normal; */
 }
 
-a :active{
-    color: red;
-}
-a :visited{
-    color: red;
+a {
+    background-color: white;
+    padding: 2px;
 }
 
 @media (max-width: 940px) {
