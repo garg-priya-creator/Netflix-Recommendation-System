@@ -4,10 +4,10 @@ A web-app which can be used to get recommendations for a series/movie, the app r
 </p>
 
  # This web-app contains 3 main pages:
--[Home Page](#home-page)
--[Recommendation Page](#recommendation-page)
--[Movie Detail Page](#movie-detail-page)
--[Netflix Page](#netflix-page)
+- [Home Page](#home-page)
+- [Recommendation Page](#recommendation-page)
+- [Movie Detail Page](#movie-detail-page)
+- [Netflix Page](#netflix-page)
 
 ## Home Page
 Here the user can choose list of their favourite movies and series and their preferred language. For example, I have entered a list with 2 Horror Movies(Insidious and Insidious Chapter 2), an action series(Supergirl) and a drama series(Suits) as my list of choices and English and Hindi as my preferred languages.
@@ -17,7 +17,7 @@ Clicking on the Get Started button the user will see the list of recommendations
 ## Recommendation Page
 Here the user will get poster images of all the recommended movies and series sorted based upon their IMDb Scores.
 ![](/app/static/screenshots/Screenshot-RecommendationPage1.png)
-![](/app/static/screenshots/Screenshot-RecommendationPage1.png)
+![](/app/static/screenshots/Screenshot-RecommendationPage2.png)
 
 Clicking on any poster image, the user will be sent to the Movie Details page for the corresponding title.
 
