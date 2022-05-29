@@ -3,9 +3,8 @@ from flask import Flask, render_template, request
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import sys
 
-def clean_data(x):
+def prepare_data(x):
         return str.lower(x.replace(" ", ""))
 
 def create_soup(x):
@@ -39,10 +38,8 @@ netflix_data['Actors'] = netflix_data['Actors'].astype('str')
 netflix_data['ViewerRating'] = netflix_data['ViewerRating'].astype('str')
 new_features = ['Genre', 'Tags', 'Actors', 'ViewerRating']
 selected_data = netflix_data[new_features]
-selected_data.Genre = selected_data.Genre.apply(clean_data)
-selected_data.Tags = selected_data.Tags.apply(clean_data)
-selected_data.Actors = selected_data.Actors.apply(clean_data)
-selected_data.ViewerRating = selected_data.ViewerRating.apply(clean_data)
+for new_feature in new_features:
+    selected_data.loc[:, new_feature] = selected_data.loc[:, new_feature].apply(prepare_data)
 selected_data.index = selected_data.index.str.lower()
 selected_data.index = selected_data.index.str.replace(" ",'')
 selected_data['soup'] = selected_data.apply(create_soup, axis = 1)
